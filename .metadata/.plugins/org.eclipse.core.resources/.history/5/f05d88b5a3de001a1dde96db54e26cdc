@@ -1,0 +1,36 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+// 迭代器的使用
+public class Main1 {
+	public static void main(String[] args) {
+		Main1 test = new Main1();
+		test.hashMapIterator();
+	}
+	
+	// HashMap迭代器
+	public void hashMapIterator() {
+		Map<Integer, Integer> map = new HashMap<>();
+		map.put(1, 2);
+		map.put(0, 1);
+		map.put(3, 6);
+		map.put(2, 4);
+		System.out.println(map.remove(0));
+		Iterator<Map.Entry<Integer, Integer>> ite = map.entrySet().iterator();
+		while(ite.hasNext()) {
+			Map.Entry<Integer, Integer> entry = ite.next();
+			System.out.println(entry.getKey()+": "+entry.getValue());
+		}
+	}
+	
+	// ArrayList迭代器
+	public void arrayListIterator() {
+		List<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(0);
+		list.add(2);
+		list.add(3);
+	}
+}
